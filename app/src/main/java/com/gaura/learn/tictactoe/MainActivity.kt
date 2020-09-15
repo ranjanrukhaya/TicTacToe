@@ -29,10 +29,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onGameWinnerChanged(player: Player?) {
-        if(player != null && player.name.isNullOrEmpty()) {
-            Toast.makeText(this, player.name, Toast.LENGTH_SHORT).show()
-        } else {
+        if (player == null || player.name.isEmpty()) {
             Toast.makeText(this, "No Winner", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, player.name, Toast.LENGTH_SHORT).show()
         }
     }
 }

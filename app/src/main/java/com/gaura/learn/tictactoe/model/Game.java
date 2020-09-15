@@ -15,7 +15,7 @@ public class Game {
     public Player player1;
     public Player player2;
 
-    public Player currentPlayer = player1;
+    public Player currentPlayer;
     public Cell[][] cells;
 
     public MutableLiveData<Player> winner = new MutableLiveData<>();
