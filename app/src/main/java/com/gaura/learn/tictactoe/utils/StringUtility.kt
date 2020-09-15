@@ -1,15 +1,14 @@
-package com.gaura.learn.tictactoe.utils;
+package com.gaura.learn.tictactoe.utils
 
-public class StringUtility {
-
-    public static String stringFromNumbers(int... numbers) {
-        StringBuilder sNumbers = new StringBuilder();
-        for (int number : numbers)
-            sNumbers.append(number);
-        return sNumbers.toString();
+object StringUtility {
+    fun stringFromNumbers(vararg numbers: Int): String {
+        val sNumbers = StringBuilder()
+        for (number in numbers) sNumbers.append(number)
+        return sNumbers.toString()
     }
 
-    public static boolean isNullOrEmpty(String value) {
-        return value == null || value.length() == 0;
+    @JvmStatic
+    fun isNullOrEmpty(value: String?): Boolean {
+        return value == null || value.isEmpty()
     }
 }
